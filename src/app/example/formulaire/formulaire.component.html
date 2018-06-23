@@ -5,30 +5,30 @@
 
 <div class="row">
   <div class="col-lg-6">
-    <form class="form-horizontal" role="form">
+    <form class="form-horizontal" role="form" (ngSubmit)="onSubmit(f)" #f="ngForm">
       <div class="form-group">
         <label class="col-md-2 control-label" for="label">Label</label>
         <div class="col-md-10">
-          <input type="text" id="label" name="label" class="form-control" placeholder="Label">
+          <input type="text" id="label" name="label" class="form-control" placeholder="Label" required ngModel>
         </div>
       </div>
 
       <div class="form-group">
         <label class="col-md-2 control-label" for="prix">Prix</label>
         <div class="col-md-10">
-          <input type="text" id="prix" name="prix" class="form-control" placeholder="Prix">
+          <input type="text" id="prix" name="prix" class="form-control" placeholder="Prix" required ngModel>
         </div>
       </div>
 
       <div class="form-group">
         <label class="col-md-2 control-label" for="quantite">Quantite</label>
         <div class="col-md-10">
-          <input type="text" id="quantite" name="quantite" class="form-control" placeholder="Quantite">
+          <input type="text" id="quantite" name="quantite" class="form-control" placeholder="Quantite" required ngModel>
         </div>
       </div>
-
+      <button type="submit" class="btn btn-primary" [disabled]="f.invalid">Ajouter</button>
     </form>
-    <button type="button" class="btn btn-primary">Ajouter</button>
+
   </div><!-- end col -->
 
 </div><!-- end row -->

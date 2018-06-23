@@ -12,6 +12,8 @@ import {HttpClientModule} from '@angular/common/http';
 import {SharedModule} from "./shared/shared.module";
 import {ExampleModule} from "./example/example.module";
 import {AdminService} from "./shared/services/admin.service";
+import {ProduitServiceService} from "./produit-service.service";
+
 
 @NgModule({
   declarations: [
@@ -36,6 +38,7 @@ import {AdminService} from "./shared/services/admin.service";
     },
     StorageService,
     AdminService,
+    ProduitServiceService,
   ],
   bootstrap: [AppComponent]
 })
