@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {HttpHeaders} from "@angular/common/http";
 
-
 @Injectable()
 export class ProduitServiceService {
 
@@ -15,6 +14,9 @@ export class ProduitServiceService {
     const headers = new HttpHeaders().set('Content-Type', 'application/json');
     return this.http.post("http://localhost/backend/public/api/produit", content, { headers: headers
     });
+  }
+  getProducts() {
+    return this.http.get("http://localhost/backend/public/api/produits");
   }
 
 }

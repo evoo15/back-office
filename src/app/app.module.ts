@@ -13,6 +13,8 @@ import {SharedModule} from "./shared/shared.module";
 import {ExampleModule} from "./example/example.module";
 import {AdminService} from "./shared/services/admin.service";
 import {ProduitServiceService} from "./produit-service.service";
+import { ProductComponent } from './example/product/product.component';
+import { ProductsComponent } from './example/products/products.component';
 
 
 @NgModule({

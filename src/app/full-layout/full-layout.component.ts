@@ -52,8 +52,8 @@ export class FullLayoutComponent implements OnInit {
         visible: true,
         childrens: [
           {
-            name: 'List',
-            url: '/example/list'
+            name: 'products',
+            url: '/example/products'
           },
           {
             name: 'Formulaire',
