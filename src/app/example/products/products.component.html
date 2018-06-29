@@ -1,11 +1,44 @@
-<button class="btn btn-primary" (click)="onGetProducts()">get products</button>
 
 
+<div class="row">
+  <div class="col-sm-12">
+    <div class="card-box">
 
+      <div class="dropdown pull-right">
+        <a href="#" class="dropdown-toggle card-drop" data-toggle="dropdown" aria-expanded="false">
+          <i class="zmdi zmdi-more-vert"></i>
+        </a>
+        <ul class="dropdown-menu" role="menu">
+          <li><a href="#">Action</a></li>
+          <li><a href="#">Another action</a></li>
+          <li><a href="#">Something else here</a></li>
+          <li class="divider"></li>
+          <li><a href="#">Separated link</a></li>
+        </ul>
+      </div>
 
-      <table >
-        <app-product *ngFor="let product of products" [product]="product"></app-product>
+      <h4 class="header-title m-t-0 m-b-30">Product list</h4>
+
+      <table class="table table-striped m-0">
+        <thead>
+        <tr>
+          <th>Label</th>
+          <th>Prix</th>
+          <th>Quantite</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let product of products" >
+          <td>{{product.label}}</td>
+          <td>{{product.quantite}}</td>
+          <td>{{product.prix}}</td>
+        </tr>
+
+        </tbody>
       </table>
 
+    </div>
+  </div>
 
-
+</div>
+<button class="btn btn-primary" (click)="onGetProducts()">get products</button>
