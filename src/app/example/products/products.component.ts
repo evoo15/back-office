@@ -23,5 +23,12 @@ export class ProductsComponent implements OnInit {
         (error: Response) => console.log(error)
       );
   }
+  onDeleteProduct(id: number) {
+    console.log(id) ;
+    this.produit_service.deleteProduct(id).subscribe(
+      () => console.log("product deleted" ),
+      () => console.log("deletion error")
+    ) ;
+  }
 
 }

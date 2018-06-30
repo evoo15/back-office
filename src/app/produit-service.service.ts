@@ -18,5 +18,8 @@ export class ProduitServiceService {
   getProducts() {
     return this.http.get("http://localhost/backend/public/api/produits");
   }
+  deleteProduct(id: number) {
+    return this.http.delete("http://localhost/backend/public/api/produit" + id ) ;
+  }
 
 }

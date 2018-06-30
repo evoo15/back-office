@@ -22,16 +22,21 @@
       <table class="table table-striped m-0">
         <thead>
         <tr>
+          <th>id</th>
           <th>Label</th>
           <th>Prix</th>
           <th>Quantite</th>
+          <th></th>
         </tr>
         </thead>
         <tbody>
         <tr *ngFor="let product of products" >
+          <th>{{product.id}}</th>
           <td>{{product.label}}</td>
           <td>{{product.quantite}}</td>
           <td>{{product.prix}}</td>
+          <td>
+            <button class="btn-danger" (click)="onDeleteProduct(product.id)">Delete</button></td>
         </tr>
 
         </tbody>
